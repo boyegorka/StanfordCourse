@@ -14,6 +14,8 @@
 		941D60222857293D002C0A7C /* MemorizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D60212857293D002C0A7C /* MemorizeTests.swift */; };
 		941D602C2857293D002C0A7C /* MemorizeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D602B2857293D002C0A7C /* MemorizeUITests.swift */; };
 		941D602E2857293D002C0A7C /* MemorizeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D602D2857293D002C0A7C /* MemorizeUITestsLaunchTests.swift */; };
+		94F8EF92285A64F0008D5D6C /* MemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F8EF91285A64F0008D5D6C /* MemoryGame.swift */; };
+		94F8EF94285A651E008D5D6C /* EmojiMemoryGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F8EF93285A651E008D5D6C /* EmojiMemoryGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		941D60272857293D002C0A7C /* MemorizeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemorizeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		941D602B2857293D002C0A7C /* MemorizeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeUITests.swift; sourceTree = "<group>"; };
 		941D602D2857293D002C0A7C /* MemorizeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		94F8EF91285A64F0008D5D6C /* MemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoryGame.swift; sourceTree = "<group>"; };
+		94F8EF93285A651E008D5D6C /* EmojiMemoryGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiMemoryGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,8 @@
 			children = (
 				941D60102857293B002C0A7C /* MemorizeApp.swift */,
 				941D60122857293B002C0A7C /* ContentView.swift */,
+				94F8EF91285A64F0008D5D6C /* MemoryGame.swift */,
+				94F8EF93285A651E008D5D6C /* EmojiMemoryGame.swift */,
 				941D60142857293D002C0A7C /* Assets.xcassets */,
 				941D60162857293D002C0A7C /* Preview Content */,
 			);
@@ -257,8 +263,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94F8EF92285A64F0008D5D6C /* MemoryGame.swift in Sources */,
 				941D60132857293B002C0A7C /* ContentView.swift in Sources */,
 				941D60112857293B002C0A7C /* MemorizeApp.swift in Sources */,
+				94F8EF94285A651E008D5D6C /* EmojiMemoryGame.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
