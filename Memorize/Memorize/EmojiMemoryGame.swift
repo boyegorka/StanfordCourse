@@ -9,23 +9,35 @@ import Foundation
 
 class EmojiMemoryGame: ObservableObject {
     
-    static let vehicles = ["🚗", "🚕", "🚌", "🏎", "🚑", "🚁", "🛸", "🚃", "🚂", "✈️", "🛥", "⛵️", "🚠", "🛴", "🚲", "🏍", "🛺", "🚜", "🚀", "🚇", "🚅", "🛶", "🛩", "🛻"]
+    typealias Card = MemoryGame<String>.Card
     
-    static func createMemoryGame() -> MemoryGame<String> {
-        MemoryGame<String>(numberOfPairsOfCards: 4) { pairIndex in
+    private static let vehicles = ["🚗", "🚕", "🚌", "🏎", "🚑", "🚁", "🛸", "🚃", "🚂", "✈️", "🛥", "⛵️", "🚠", "🛴", "🚲", "🏍", "🛺", "🚜", "🚀", "🚇", "🚅", "🛶", "🛩", "🛻"].shuffled()
+    private static let animals = ["🐶", "🐢", "🐹", "🐻", "🦊", "🐰", "🐼", "🐨", "🦁", "🐮", "🐷", "🐵", "🦄", "🐺", "🦘", "🐊", "🐑", "🐓", "🐁", "🦩", "🦔", "🦜", "🐬", "🐍"].shuffled()
+    private static let emojis = ["😃", "😅", "😇", "😉", "😍", "😋", "😝", "🤨", "😎", "🥸", "🥳", "🥺", "😡", "🥶", "🤯", "😱", "😶", "😬", "😴", "😪", "😵‍💫", "😈", "🤠", "🤢"].shuffled()
+    
+    private static func createMemoryGame() -> MemoryGame<String> {
+        MemoryGame<String>(numberOfPairsOfCards: 8) { pairIndex in
             vehicles[pairIndex]
         }
     }
     
-    @Published private var model: MemoryGame<String> = EmojiMemoryGame.createMemoryGame()
+    @Published private var model = createMemoryGame()
     
-    var cards: Array<MemoryGame<String>.Card> {
+    var cards: Array<Card> {
         model.cards
     }
     
 //    MARK: - Intent(s)
     
-    func choose(_ card: MemoryGame<String>.Card) {
+    func choose(_ card: Card) {
         model.choose(card)
+    }
+    
+    func shuffle() {
+        model.shuffle()
+    }
+    
+    func restart() {
+        model = EmojiMemoryGame.createMemoryGame()
     }
 }
